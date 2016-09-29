@@ -42,6 +42,9 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YY-49-dE0">
+                        <state key="normal" image="download_arrow.png"/>
+                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-3n-Qq5">
                         <constraints>
                             <constraint firstAttribute="width" constant="61" id="trG-ux-gAu"/>
@@ -59,25 +62,32 @@
                     <constraint firstItem="9ot-C6-BYb" firstAttribute="trailing" secondItem="vZ1-eb-PNT" secondAttribute="trailing" id="Dia-yx-amw"/>
                     <constraint firstItem="vZ1-eb-PNT" firstAttribute="leading" secondItem="G7W-xR-5FN" secondAttribute="leading" id="E9p-gF-wdv"/>
                     <constraint firstItem="i2J-3n-Qq5" firstAttribute="bottom" secondItem="Qsa-Zl-1yk" secondAttribute="bottomMargin" id="FDn-IN-iii"/>
+                    <constraint firstItem="7YY-49-dE0" firstAttribute="top" secondItem="i2J-3n-Qq5" secondAttribute="top" id="Rt7-ey-DIp"/>
                     <constraint firstItem="cwV-f2-2SS" firstAttribute="leading" secondItem="Qsa-Zl-1yk" secondAttribute="leadingMargin" id="WvP-f4-v99"/>
+                    <constraint firstItem="7YY-49-dE0" firstAttribute="bottom" secondItem="i2J-3n-Qq5" secondAttribute="bottom" id="XhB-AZ-3xu"/>
                     <constraint firstItem="vZ1-eb-PNT" firstAttribute="top" secondItem="9ot-C6-BYb" secondAttribute="bottom" constant="2" id="cLq-og-3sf"/>
                     <constraint firstItem="cwV-f2-2SS" firstAttribute="top" secondItem="Qsa-Zl-1yk" secondAttribute="topMargin" id="dkQ-cA-eVi"/>
                     <constraint firstItem="cwV-f2-2SS" firstAttribute="top" secondItem="9ot-C6-BYb" secondAttribute="top" id="fpx-3k-mfY"/>
                     <constraint firstItem="9ot-C6-BYb" firstAttribute="leading" secondItem="vZ1-eb-PNT" secondAttribute="leading" id="h0y-Yx-CbH"/>
+                    <constraint firstItem="7YY-49-dE0" firstAttribute="trailing" secondItem="i2J-3n-Qq5" secondAttribute="trailing" id="lVg-ec-fvM"/>
                     <constraint firstItem="9ot-C6-BYb" firstAttribute="leading" secondItem="cwV-f2-2SS" secondAttribute="trailing" constant="8" symbolic="YES" id="vBh-j4-Sdu"/>
                     <constraint firstAttribute="trailingMargin" secondItem="9ot-C6-BYb" secondAttribute="trailing" constant="56" id="vpZ-H6-zca"/>
+                    <constraint firstItem="7YY-49-dE0" firstAttribute="leading" secondItem="i2J-3n-Qq5" secondAttribute="leading" id="wGb-2S-MGr"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="albumLabel" destination="vZ1-eb-PNT" id="0zr-P3-vfC"/>
                 <outlet property="artistLabel" destination="G7W-xR-5FN" id="bSC-bM-4Dm"/>
                 <outlet property="coverImageView" destination="cwV-f2-2SS" id="bWO-nf-PVB"/>
+                <outlet property="downloadBtn" destination="7YY-49-dE0" id="Qd0-sx-vsq"/>
+                <outlet property="playBtn" destination="i2J-3n-Qq5" id="uHh-rU-lGq"/>
                 <outlet property="trackLabel" destination="9ot-C6-BYb" id="ufo-cQ-yXt"/>
             </connections>
-            <point key="canvasLocation" x="-12.5" y="-68"/>
+            <point key="canvasLocation" x="-393.5" y="-155"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="download_arrow.png" width="512" height="512"/>
         <image name="placeholder" width="112" height="112"/>
         <image name="playPAUSE" width="128" height="128"/>
     </resources>

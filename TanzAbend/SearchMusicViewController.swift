@@ -135,10 +135,13 @@ class SearchMusicViewController: UIViewController {
             }
             if let searchResultNonOpt = resultDict["album_image_file"] as? String {
                 searchResult.albumImageLink += searchResultNonOpt
-                print(searchResult.albumImageLink)
             } else {
                 print("No image url")
+                if let searchResultNonOpt = resultDict["track_image_file"] as? String {
+                    searchResult.albumImageLink = searchResultNonOpt
+                }
             }
+            
             searchResults.append(searchResult)
         }
         return searchResults
@@ -190,6 +193,7 @@ extension SearchMusicViewController: UITableViewDataSource {
             cell.albumLabel.text = searchResult.album
             cell.artistLabel.text = searchResult.artist
             cell.trackLabel.text = searchResult.track
+            cell.playBtn.isHidden = true  
             cell.configureImageForSearchResult(searchResult: searchResult)
             return cell
         }
