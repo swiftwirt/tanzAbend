@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D0AFA4CA1D9C01C70009614E /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0AFA4C91D9C01C70009614E /* LoadingCell.xib */; };
 		D0AFA4CE1D9C3E510009614E /* PlayerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AFA4CD1D9C3E500009614E /* PlayerPopUpViewController.swift */; };
+		D0AFA4D61D9C6D5C0009614E /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AFA4D51D9C6D5C0009614E /* SearchResult.swift */; };
 		D0F8BDC31D9BCF6900D9D105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8BDC21D9BCF6900D9D105 /* AppDelegate.swift */; };
 		D0F8BDC51D9BCF6900D9D105 /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8BDC41D9BCF6900D9D105 /* SearchMusicViewController.swift */; };
 		D0F8BDC71D9BCF6900D9D105 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8BDC61D9BCF6900D9D105 /* PlayerViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		D0AFA4C91D9C01C70009614E /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		D0AFA4CD1D9C3E500009614E /* PlayerPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPopUpViewController.swift; sourceTree = "<group>"; };
+		D0AFA4D51D9C6D5C0009614E /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		D0F8BDBF1D9BCF6900D9D105 /* TanzAbend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TanzAbend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8BDC21D9BCF6900D9D105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F8BDC41D9BCF6900D9D105 /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		D0AFA4D11D9C48950009614E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0AFA4D51D9C6D5C0009614E /* SearchResult.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				D0AFA4CE1D9C3E510009614E /* PlayerPopUpViewController.swift in Sources */,
 				D0F8BDC31D9BCF6900D9D105 /* AppDelegate.swift in Sources */,
 				D0F8BDC51D9BCF6900D9D105 /* SearchMusicViewController.swift in Sources */,
+				D0AFA4D61D9C6D5C0009614E /* SearchResult.swift in Sources */,
 				D0F8BDD91D9BD4F600D9D105 /* TrackCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
