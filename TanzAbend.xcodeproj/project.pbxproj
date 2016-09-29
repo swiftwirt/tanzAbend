@@ -10,6 +10,8 @@
 		D0AFA4CA1D9C01C70009614E /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0AFA4C91D9C01C70009614E /* LoadingCell.xib */; };
 		D0AFA4CE1D9C3E510009614E /* PlayerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AFA4CD1D9C3E500009614E /* PlayerPopUpViewController.swift */; };
 		D0AFA4D61D9C6D5C0009614E /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AFA4D51D9C6D5C0009614E /* SearchResult.swift */; };
+		D0AFA4D81D9CCBE70009614E /* DownloadImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AFA4D71D9CCBE70009614E /* DownloadImageExtension.swift */; };
+		D0AFA4DF1D9CE30E0009614E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0AFA4DE1D9CE30E0009614E /* Info.plist */; };
 		D0F8BDC31D9BCF6900D9D105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8BDC21D9BCF6900D9D105 /* AppDelegate.swift */; };
 		D0F8BDC51D9BCF6900D9D105 /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8BDC41D9BCF6900D9D105 /* SearchMusicViewController.swift */; };
 		D0F8BDC71D9BCF6900D9D105 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8BDC61D9BCF6900D9D105 /* PlayerViewController.swift */; };
@@ -25,6 +27,8 @@
 		D0AFA4C91D9C01C70009614E /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		D0AFA4CD1D9C3E500009614E /* PlayerPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPopUpViewController.swift; sourceTree = "<group>"; };
 		D0AFA4D51D9C6D5C0009614E /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		D0AFA4D71D9CCBE70009614E /* DownloadImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageExtension.swift; sourceTree = "<group>"; };
+		D0AFA4DE1D9CE30E0009614E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F8BDBF1D9BCF6900D9D105 /* TanzAbend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TanzAbend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8BDC21D9BCF6900D9D105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F8BDC41D9BCF6900D9D105 /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +36,6 @@
 		D0F8BDC91D9BCF6900D9D105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0F8BDCB1D9BCF6900D9D105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F8BDCE1D9BCF6900D9D105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D0F8BDD01D9BCF6A00D9D105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F8BDD61D9BD34800D9D105 /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		D0F8BDD81D9BD4F500D9D105 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		D0F8BDDE1D9BEC7000D9D105 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F8BDD81D9BD4F500D9D105 /* TrackCell.swift */,
+				D0AFA4D71D9CCBE70009614E /* DownloadImageExtension.swift */,
 				D0F8BDD61D9BD34800D9D105 /* TrackCell.xib */,
 				D0F8BDDE1D9BEC7000D9D105 /* NothingFoundCell.xib */,
 				D0AFA4C91D9C01C70009614E /* LoadingCell.xib */,
@@ -104,7 +108,7 @@
 				D0AFA4D21D9C489C0009614E /* View */,
 				D0AFA4D31D9C48A60009614E /* Controllers */,
 				D0F8BDCB1D9BCF6900D9D105 /* Assets.xcassets */,
-				D0F8BDD01D9BCF6A00D9D105 /* Info.plist */,
+				D0AFA4DE1D9CE30E0009614E /* Info.plist */,
 			);
 			path = TanzAbend;
 			sourceTree = "<group>";
@@ -175,6 +179,7 @@
 				D0F8BDCA1D9BCF6900D9D105 /* Main.storyboard in Resources */,
 				D0F8BDDF1D9BEC7000D9D105 /* NothingFoundCell.xib in Resources */,
 				D0F8BDD71D9BD34800D9D105 /* TrackCell.xib in Resources */,
+				D0AFA4DF1D9CE30E0009614E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AFA4D81D9CCBE70009614E /* DownloadImageExtension.swift in Sources */,
 				D0F8BDC71D9BCF6900D9D105 /* PlayerViewController.swift in Sources */,
 				D0AFA4CE1D9C3E510009614E /* PlayerPopUpViewController.swift in Sources */,
 				D0F8BDC31D9BCF6900D9D105 /* AppDelegate.swift in Sources */,

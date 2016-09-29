@@ -16,6 +16,8 @@ class TrackCell: UITableViewCell {
     @IBOutlet weak var trackLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     
+    var downloadTask: URLSessionDownloadTask?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -24,5 +26,16 @@ class TrackCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    func configureImageForSearchResult(searchResult: SearchResult) {
+        trackLabel.text = searchResult.track
+        if searchResult.albumImageLink.isEmpty {
+           coverImageView.image = UIImage(named: "placeholder.png")
+        } else {
+            if let url = URL(string: searchResult.albumImageLink) {
+                downloadTask = coverImageView.loadImageWithURL(url: url)
+            }
+        }
     }
 }

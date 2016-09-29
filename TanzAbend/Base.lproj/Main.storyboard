@@ -35,9 +35,9 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eOJ-aC-TZM">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <segments>
-                                    <segment title="Searched"/>
                                     <segment title="Top Rated"/>
                                     <segment title="Recent"/>
+                                    <segment title="Searched"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentDidChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="l1l-gB-fU8"/>

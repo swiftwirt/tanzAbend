@@ -35,6 +35,10 @@ class SearchMusicViewController: UIViewController {
         tableView.register(nothingFoundCellNib, forCellReuseIdentifier: ReuseIdentifiersForCells.nothingFoundCell)
         let loadingCellNib = UINib(nibName: "LoadingCell", bundle: nil)
         tableView.register(loadingCellNib, forCellReuseIdentifier: ReuseIdentifiersForCells.loadingCell)
+        if segmentedControl.selectedSegmentIndex == 0 {
+            requestURL = URL(string: "https://freemusicarchive.org/featured.json")
+            performSearch(URL: requestURL)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,16 +50,17 @@ class SearchMusicViewController: UIViewController {
         searchCategoryIndex = sender.selectedSegmentIndex
         switch searchCategoryIndex {
         case 0:
+            requestURL = URL(string: "https://freemusicarchive.org/featured.json")
+            performSearch(URL: requestURL)
+        case 1:
+            requestURL = URL(string: "https://freemusicarchive.org/recent.json")
+            performSearch(URL: requestURL)
+        case 2:
             requestURL = getURLfrom(searchText: searchBar.text!)
             if !hasSearched {
                 performSearch(URL: requestURL)
             }
-        case 1:
-            requestURL = URL(string: "https://freemusicarchive.org/featured.json")
-            performSearch(URL: requestURL)
-        case 2:
-            requestURL = URL(string: "https://freemusicarchive.org/recent.json")
-            performSearch(URL: requestURL)
+            tableView.reloadData()
         default:
             return
         }
@@ -126,13 +131,13 @@ class SearchMusicViewController: UIViewController {
             if let searchResultNonOpt = resultDict["track_file_url"] as? String {
                 searchResult.trackDownloadLink = searchResultNonOpt
             } else {
-                print("No url")
+                print("No download url")
             }
             if let searchResultNonOpt = resultDict["album_image_file"] as? String {
                 searchResult.albumImageLink += searchResultNonOpt
                 print(searchResult.albumImageLink)
             } else {
-                print("No url")
+                print("No image url")
             }
             searchResults.append(searchResult)
         }
@@ -185,6 +190,7 @@ extension SearchMusicViewController: UITableViewDataSource {
             cell.albumLabel.text = searchResult.album
             cell.artistLabel.text = searchResult.artist
             cell.trackLabel.text = searchResult.track
+            cell.configureImageForSearchResult(searchResult: searchResult)
             return cell
         }
     }
@@ -204,6 +210,10 @@ extension SearchMusicViewController: UITableViewDelegate {
 extension SearchMusicViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let url = getURLfrom(searchText: searchBar.text!)
+        performSearch(URL: url)
+        hasSearched = true
+        segmentedControl.selectedSegmentIndex = 2
         print("The search text is: '\(searchBar.text!)'")
     }
     
@@ -211,3 +221,4 @@ extension SearchMusicViewController: UISearchBarDelegate {
         return .topAttached
     }
 }
+
